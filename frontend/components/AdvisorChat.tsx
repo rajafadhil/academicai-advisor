@@ -14,7 +14,7 @@ export default function AdvisorChat({ studentId }: { studentId: string }) {
         e.preventDefault();
         if (!input.trim()) return;
 
-        const userMsg = { role: 'user', content: input };
+        const userMsg: Message = { role: 'user', content: input };
         setMessages(prev => [...prev, userMsg]);
         setInput('');
         setLoading(true);
